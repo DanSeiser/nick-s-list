@@ -42,5 +42,8 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "sequelize": "^4.22.6"
   }
 }
