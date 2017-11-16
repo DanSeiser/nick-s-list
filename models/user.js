@@ -7,7 +7,8 @@ module.exports = function(sequelize, DataTypes) {
   },
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    password: DataTypes.STRING
+    password: DataTypes.STRING,
+    email: DataTypes.STRING
   });
 
   User.associate = function(models) {
@@ -18,6 +19,5 @@ module.exports = function(sequelize, DataTypes) {
     }),
     User.hasMany(models.MasterTask);
   };
-
   return Task;
 };

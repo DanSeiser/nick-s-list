@@ -1,5 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
   var Task = sequelize.define("Task", {
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
