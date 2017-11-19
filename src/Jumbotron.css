@@ -1,0 +1,19 @@
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #143A52;
+    color: #E3EFF3;
+    height: 700px;
+  }
+  .jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+  }
+
+  h1 {
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  .form-group {
+      margin: 10px;
+  }
