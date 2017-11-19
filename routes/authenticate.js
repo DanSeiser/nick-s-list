@@ -1,3 +1,5 @@
+var passport = require('../config/passport');
+
 app.post('/login',
   passport.authenticate('local'),
   function(req, res) {
