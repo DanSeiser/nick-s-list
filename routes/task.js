@@ -23,8 +23,8 @@ router.post('/task', function(req, res, next){
 
 //update data
 router.put('/task/:id', function(req, res, next){
-	task.findByIdAndUpdate({_id: req.params.id}, req.body).then(function(){
-	task.findOne({_id: req.params.id}).then(function(task){
+	task.findByIdAndUpdate({id: req.params.id}, req.body).then(function(){
+	task.findOne({id: req.params.id}).then(function(task){
 		res.send(task);
 	});
 	});
