@@ -20,8 +20,8 @@ router.post('/mastertask', function(req, res, next){
 
 //update data
 router.put('/mastertask/:id', function(req, res, next){
-  mastertask.findByIdAndUpdate({_id: req.params.id}, req.body).then(function(){
-  mastertask.findOne({_id: req.params.id}).then(function(mastertask){
+  mastertask.findByIdAndUpdate({id: req.params.id}, req.body).then(function(){
+  mastertask.findOne({id: req.params.id}).then(function(mastertask){
     res.send(mastertask);
   });
   });
