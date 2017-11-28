@@ -1,6 +1,6 @@
 import React from "react";
-import Logbar from "../components/Logbar";
-import Jumbotron from "../components/Jumbotron";
+import Logbar from "./components/Logbar/Logbar";
+import Jumbotron from "./components/Jumbotron/Jumbotron";
 
 const Login = () =>
   <Logbar />
