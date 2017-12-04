@@ -1,12 +1,12 @@
 import React from "react";
 import Jumbotron from "../components/Jumbotron";
-import LoginForm from './components/LoginForm';
+import AccountCreate from './components/AccountCreate';
 
-const Login = () =>
+const SignUp = () =>
 <div className='container-fluid'>
     <Jumbotron>
-        <LoginForm />
+        <AccountCreate />
     </Jumbotron>
 </div>;
 
-export default Login;
+export default SignUp;

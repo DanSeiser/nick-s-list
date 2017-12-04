@@ -1,43 +1,21 @@
-module.exports = function(sequelize, DataTypes) {
-  var Task = sequelize.define("Task", {
-    id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-    },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
-    },
-    completeBy: {
-      type: DataTypes.DATEONLY
-    },
-    isComplete: {
-      type: DataTypes.BOOLEAN,
-      default : 0
-    },
-    isConfirmed: {
-      type: DataTypes.BOOLEAN,
-      default : 0
-    }
-  });
+// app/models/task.js
+// load the things we need
+var mongoose = require('mongoose');
 
-  Task.associate = function(models) {
-    // We're saying that a Task should belong to a User
-    // A Task can't be created without an User due to the foreign key constraint
-    Task.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
-  return Task;
-};
+// define the schema for our user model
+var task = mongoose.Schema({
+    name            :   String,
+    description     :   String,
+    taskMaster      :   String,
+    userID          :   String,
+    completeBy      :   Date,
+    isComplete      :   {Type : Boolean, default : 0},
+    isConfirmed     :   {Type : Boolean, default : 0}
+});
+
+// methods ======================
+
+
+
+// create the model for users and expose it to our app
+module.exports = mongoose.model('Task', task);

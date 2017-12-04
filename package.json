@@ -18,6 +18,9 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "express": "^4.15.4"
+    "axios": "^0.17.1",
+    "express": "^4.15.4",
+    "material-ui": "^0.19.4",
+    "react-tap-event-plugin": "^3.0.2"
   }
 }
